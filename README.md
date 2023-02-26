@@ -42,6 +42,8 @@ del -Force AzCopy.zip
 del -Force -Recurse .\AzCopy\
 ```
 
+Please ensure that the path to the AzCopy executable file is specified in the System variables for the AzClient to work properly. Otherwise, you will have to specify the path to the executable file while iniating the AzClient. Refer the examples and common issues portion to know more about this.
+
 - For detailed installation steps, you can refer the following links
 1. [AzCopy official Documentation](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10)
 2. [AzCopy Installation Scripts Option 1](https://www.thomasmaurer.ch/2019/05/how-to-install-azcopy-for-azure-storage/)
@@ -49,6 +51,18 @@ del -Force -Recurse .\AzCopy\
 
 
 ## Basic Usage
+
+### NOTE: If you want to specify the AzCopy binary/executable to be used according to the OS, you can do it while initiating the AzClient object.
+
+#### For Linux based systems (Please  ensure the file specified here has the required permissions)
+```
+az_client = AzClient(exe_to_use="/usr/bin/azcopy")
+```
+
+#### For Windows
+```
+az_client = AzClient(exe_to_use="C:\\Users\\DELL\\AppData\\Local\\Programs\\AZCopy\\azcopy.exe")
+```
 
 ### 1. Upload Directory to Remote Location
 
@@ -171,9 +185,17 @@ print(job_info.__dict__)
 
 For more examples, you can refer [ExamplesJupyterNotebook](examples.ipynb)
 
+## Common Issues
+
+1. For Windows operating system, if there is an error "FileNotFoundError: [WinError 2] The system cannot find the file specified", please ensure that the path to AzCopy exectable file is set in System Environment Variables. <br>
+If the error persists even after setting the path, you can specify the path to the executable while creating the AzClient object. <br>
+```
+az_client = AzClient(exe_to_use="C:\\Users\\DELL\\AppData\\Local\\Programs\\AZCopy\\azcopy.exe")
+```
+
 ## v1.0.0
 
 - First version of this python azcopy wrapper!
 - Validated against AzCopy 10.17.0.
 - Copy and Sync commands
-- Tested only on Ubuntu 20.04 as of now.
+- Tested on Ubuntu 20.04 and Windows 10.

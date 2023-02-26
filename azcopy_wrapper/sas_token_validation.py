@@ -1,6 +1,5 @@
 import time
 import datetime
-import pytz
 from urllib.parse import parse_qs
 
 
