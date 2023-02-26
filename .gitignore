@@ -2,3 +2,6 @@
 .azcopy_logs/
 __pycache__/
 test_data/
+bin/
+examples1.ipynb
+test.ipynb
