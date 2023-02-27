@@ -191,7 +191,7 @@ job_info = az_client.sync_to_remote_location(
 print(job_info.__dict__)
 ```
 
-For more examples, you can refer [ExamplesJupyterNotebook](examples.ipynb)
+For more examples, you can refer [AzCopy Wrapper Examples Notebook](https://github.com/yashmarathe21/py-azcopy-wrapper/blob/master/examples.ipynb)
 
 ## Common Issues
 
@@ -201,7 +201,7 @@ If the error persists even after setting the path, you can specify the path to t
 az_client = AzClient(exe_to_use="C:\\Users\\DELL\\AppData\\Local\\Programs\\AZCopy\\azcopy.exe")
 ```
 
-## v0.0.6
+## v1.0.0
 
 - First version of this python azcopy wrapper!
 - Validated against AzCopy 10.17.0.

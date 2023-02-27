@@ -6,7 +6,7 @@ with open("README.md") as f:
 
 setup(
     name="azcopy_wrapper",
-    version="0.0.6",
+    version="1.0.0",
     description=("A simple AzCopy wrapper to transfer data"),
     long_description=long_description,
     long_description_content_type="text/markdown",
