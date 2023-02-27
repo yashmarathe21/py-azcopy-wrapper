@@ -67,6 +67,14 @@ az_client = AzClient(exe_to_use="C:\\Users\\DELL\\AppData\\Local\\Programs\\AZCo
 ### 1. Upload Directory to Remote Location
 
 ```
+from azcopy_wrapper.azcopy_client import AzClient
+from azcopy_wrapper.azcopy_utilities import (
+    AzRemoteSASLocation,
+    AzLocalLocation,
+    AzCopyOptions,
+    AzSyncOptions,
+)
+
 local_location = AzLocalLocation(
     path="./test_data/",
     use_wildcard=True,

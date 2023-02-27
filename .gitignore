@@ -1,7 +1,10 @@
-# Artefacts
-.azcopy_logs/
 __pycache__/
+.azcopy_logs/
 test_data/
 bin/
 examples1.ipynb
 test.ipynb
+venv/
+azcopy_wrapper.egg-info/
+build/
+dist/
