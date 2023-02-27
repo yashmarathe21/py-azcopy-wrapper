@@ -17,7 +17,7 @@ from azcopy_wrapper.azcopy_utilities import (
     LocationType,
 )
 from azcopy_wrapper.sas_token_validation import is_sas_token_session_expired
-from utils.execute_command import execute_command
+from azcopy_wrapper.utils.execute_command import execute_command
 
 
 class AzClient:
