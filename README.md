@@ -201,7 +201,7 @@ If the error persists even after setting the path, you can specify the path to t
 az_client = AzClient(exe_to_use="C:\\Users\\DELL\\AppData\\Local\\Programs\\AZCopy\\azcopy.exe")
 ```
 
-## v1.0.0
+## v0.0.5
 
 - First version of this python azcopy wrapper!
 - Validated against AzCopy 10.17.0.
